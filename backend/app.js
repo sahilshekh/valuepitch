@@ -11,7 +11,7 @@ const authRoutes = require('./routes/authRoutes');
 // Import middlewares
 const jwtAuthenticationMiddleware = require('./middleware/JWTAuthenticationMiddlewar');
 const adminMiddleware = require('./middleware/adminMiddleware');
-
+const reportRoutes = require('./routes/reportRoutes');
 // Initialize Express app
 const app = express();
 
@@ -24,7 +24,7 @@ connectDB();
 
 // Public Auth Routes
 app.use('/api', authRoutes);
-
+app.use('/api/reports', reportRoutes);
 // Client Routes (protected by JWT)
 app.use('/api/clients', jwtAuthenticationMiddleware, clientRoutes);
 

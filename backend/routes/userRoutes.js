@@ -4,7 +4,7 @@ const { createUser, getUsers, updateUser, deleteUser } = require('../controllers
 
 // CRUD Routes for Users
 router.post('/', createUser); // Create a user
-router.get('/:clientId', getUsers); // Get users by clientId
+router.get('/', getbackend/app.jsUsers); // Get users by clientId
 router.put('/:id', updateUser); // Update user by user ID
 router.delete('/:id', deleteUser); // Delete user by user ID
 
